@@ -257,7 +257,7 @@ function setupGifListener() {
         // Lần đầu tiên: tự động chạy GIF
         if (isFirstLoad) {
             const gifPath = birthdayGif.getAttribute('data-gif');
-            birthdayGif.src = gifPath + '?' + new Date().getTime();
+            birthdayGif.src = gifPath;
             isGifPlaying = true;
             playAudio(); // Phát âm thanh
             console.log('GIF auto-playing on first load');
@@ -277,7 +277,7 @@ function setupGifListener() {
             if (!isGifPlaying) {
                 // Load GIF thực tế
                 const gifPath = birthdayGif.getAttribute('data-gif');
-                birthdayGif.src = gifPath + '?' + new Date().getTime();
+                birthdayGif.src = gifPath;
                 isGifPlaying = true;
                 playAudio(); // Phát âm thanh
                 console.log('GIF started playing (by click)');
