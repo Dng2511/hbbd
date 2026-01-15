@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday [Nickname] ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="data.js"></script>
+</head>
+<body>
+    <!-- Màn hình chào đầu tiên -->
+    <div id="welcome-screen" class="screen active">
+        <div class="welcome-content">
+            <h1 class="fade-in">Xin chào [Nickname]! 💝</h1>
+            <p class="fade-in-delay">Bạn biết không, hôm nay là một ngày đặc biệt...</p>
+            <button id="start-btn" class="btn-primary pulse">Bấm vào đây nhé! 🎁</button>
+        </div>
+        <canvas id="fireworks"></canvas>
+    </div>
+
+    <!-- Màn hình đếm ngược -->
+    <div id="countdown-screen" class="screen">
+        <div class="countdown-content">
+            <h2 class="typing-text">Tôi có thứ này dành cho bạn...</h2>
+            <div class="countdown-timer">
+                <div class="countdown-number">3</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Màn hình thiệp chúc mừng -->
+    <div id="card-screen" class="screen">
+        <div class="floating-hearts"></div>
+        <div class="card-container">
+            <div class="envelope" id="envelope">
+                <div class="envelope-flap"></div>
+                <div class="envelope-body"></div>
+                <div class="letter" id="letter">
+                    <div class="letter-content">
+                        <h2>💖 Chúc mừng sinh nhật [Nickname]! 💖</h2>
+                        <p>[Name] thân mến,</p>
+                        <p>Hôm nay là một ngày đặc biệt, là ngày [Name] chào đời.
+                        Cảm ơn bạn đã luôn là người bạn tuyệt vời, đã mang đến nhiều niềm vui và kỷ niệm đẹp.</p>
+                        <p>Chúc [Name] tuổi mới [Age] luôn hạnh phúc, khỏe mạnh và thành công. Hy vọng những điều tốt đẹp nhất sẽ đến với bạn!</p>
+                        <p class="signature">Chúc mừng sinh nhật! ❤️</p>
+                        <button id="goto-gift-btn" class="btn-primary">Xem thêm 💕</button>
+                    </div>
+                </div>
+            </div>
+            <p class="instruction">👆 Nhấn vào phong bì để mở thiệp nhé!</p>
+        </div>
+    </div>
+
+    <!-- Màn hình video -->
+    <div id="gallery-screen" class="screen">
+        <div class="gallery-container">
+            <h2 class="gallery-title"><img src="emoji.png" alt="emoji" class="title-emoji"> niga <img src="emoji.png" alt="emoji" class="title-emoji"></h2>
+            <div class="video-container">
+                <img id="birthday-gif" src="birthday_thumb.png" alt="Birthday Animation" width="600" height="400" style="cursor: pointer; border-radius: 10px;" data-gif="birthday.gif">
+            </div>
+            <!-- Audio element cho GIF -->
+            <audio id="birthday-audio" src="birthday-audio.mp3"></audio>
+            <div class="final-message">
+                <h3>💝 Chúc mừng sinh nhật [Name]! 💝</h3>
+                <p>Cảm ơn bạn đã mang đến nhiều niềm vui và kỷ niệm đẹp!</p>
+                <button id="replay-btn" class="btn-primary"> Xem lại từ đầu</button>
+            </div>
+        </div>
+        <div class="floating-balloons"></div>
+    </div>
+
+    <!-- Confetti Container -->
+    <div id="confetti-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
